@@ -1,3 +1,5 @@
+ [来自官方教程](https://git-scm.com/docs "With a Title"). 
+
 ## 基本概念
 ### Git中文件有三种状态：
 
@@ -24,7 +26,7 @@
 
 
 ## 详细操作
-### 创建仓库 将新文件加入追踪并放到暂存区 将修改的文件放入暂存区  提交更改到本地分支 上传到GitHub
+#### 创建仓库
 
     git init #创建本地git仓库
 
@@ -46,7 +48,7 @@
 
 评价：缺点：需要了解.gitignore文件的规则。优点：在后面git status会忽略被忽略的文件的状态
 
-### 你所需要知道的
+### 你目前所需要知道的
 ----
 
 #### 将修改的文件放入暂存区
@@ -86,7 +88,7 @@
 ## 其他
 ###　Connecting to GitHub with SSH
 作用：一劳永逸的配置，不再需要每次上传本地仓库都登陆github。
-<a href="可以直接按照官网教程配置">https://help.github.com/en/articles/connecting-to-github-with-ssh/</a>
+ [可以直接按照官网教程配置](https://help.github.com/en/articles/connecting-to-github-with-ssh "With a Title"). 
 
 １．配置名称和邮箱
 
