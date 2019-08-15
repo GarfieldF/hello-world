@@ -88,6 +88,7 @@
 ## 其他
 ###　Connecting to GitHub with SSH
 作用：一劳永逸的配置，不再需要每次上传本地仓库都登陆github。
+
  [可以直接按照官网教程配置](https://help.github.com/en/articles/connecting-to-github-with-ssh "With a Title"). 
 
 １．配置名称和邮箱
