@@ -34,7 +34,7 @@
 
 现在的暂存区域已经准备妥当可以提交了。 在此之前，请一定要确认还有什么修改过的或新建的文件还没有git add 过，否则提交的时候不会记录这些还没暂存起来的变化。  所以准备提交前，可以先用 git status 看下，是不是都已暂存起来了， 然后再运行提交命令 
 
-### 协作
+#### 你目前需要知道的部分
 ----
 
     git commit -m "your commit message e.g.fixed some bugs"
@@ -45,7 +45,7 @@
     git remote set-url origin http://github.com/GarfieldF/RGBT-tracking.git #如果地址错误，重定向GitHub仓库地址
 
 ----
-
+### 协作
     git pull #拉取远端仓库= git fetch git merge #获取你的小伙伴上传的分支，和你的分支合并，如果有冲突手动选择保留哪个版本
 
     git slash #会把所有未提交的修改（包括暂存的和非暂存的）都保存起来，用于后续恢复当前工作目录。
