@@ -48,6 +48,10 @@
 
 评价：缺点：需要了解.gitignore文件的规则。优点：在后面git status会忽略被忽略的文件的状态
 
+#### 列出目前所有被追踪的文件
+
+    git ls-tree -r master --name-only
+
 ### 你目前所需要知道的
 ----
 
