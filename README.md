@@ -1,17 +1,24 @@
-Git中文件有三种状态：已修改（modified）和已暂存（staged）已提交（committed）
+## 基本概念
+### Git中文件有三种状态：
 
-Git 项目的三个工作区域：工作目录、暂存区域、Git 仓库（本地仓库/远程仓库）
++ 已修改（modified）
++ 已暂存（staged）
++ 已提交（committed）
+
+### Git 项目的三个工作区域：
+
+工作目录、暂存区域、Git 仓库（本地仓库/远程仓库）
 <img src="github.png" style="zoom:40%"  height="500px">
 
-# 基本的 Git 工作流程如下：
+### 基本的 Git 工作流程如下：
 0. 将文件加入追踪 git add
 1. 在工作目录中修改文件。
 2. 暂存文件，修改过的文件的快照自动放入暂存区域。
 3. 提交更新，找到暂存区域的文件，将快照永久性存储到本地Git 仓库的当前分支。Git commit
 4. 上传服务器，将本地分支上传到GitHub/远程服务器
 
-
-# 创建仓库 并添加文件 上传到GitHub
+## 基本操作
+### 创建仓库 并添加文件 上传到GitHub
   Git init #创建git
   Git add toy/*.py #添加文件到track,以后git会追踪你的modify
   Git add ./*.py
@@ -42,6 +49,8 @@ git slash
 等到修完Bug，提交到服务器上后，再使用git stash apply将以前的工作恢复回来。
 
 ----
+## 其他
+
 配置名称和邮箱
  git config --global user.name "GarfieldF"
  git config --global user.email "xxx@163.com"
@@ -50,7 +59,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"加到GitHub里
 
 
 
-# 从GitHub克隆仓库
+### 从GitHub克隆仓库
 git clone http://github.com/GarfieldF/RGBT-tracking
-# 从GitHub下载并添加子模块
+### 从GitHub下载并添加子模块
 git submodule add http://
