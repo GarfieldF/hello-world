@@ -53,7 +53,7 @@
 
 ----
 ## 其他
-
+每次上传本地分支都需要输入账号和密码，我们可以一劳永逸的配置一下就不再需要登陆。
 配置名称和邮箱
 
     git config --global user.name "GarfieldF"
@@ -61,8 +61,11 @@
   
 生成新的密钥
 
-    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"加到GitHub里
-
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    
+添加到你的github账号设置中
+GitHub  -- setting  --  SSH and GPG keys --New SSH key
+以后就不需要登陆了
 
 
 ### 从GitHub克隆仓库
