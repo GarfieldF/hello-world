@@ -2,24 +2,52 @@
 # https://git-scm.com/docs/gitignore
 # https://github.com/github/gitignore/blob/master/Python.gitignore
 
-
+#%%%%%%%%%%%%WAY1%%%%%%%%%%%%%%#
 # custom  
-# exclude everything except ./*.py&sh
+# exclude everything in the dir root except ./*.py&sh
 /*
 !*.py
 !*.sh
-#except  toy/*.py&sh 
+#except  toy's path and toy/*.py&sh 
 !/toy
 /toy/*
 !/toy/*.py
 !/toy/*.sh
-#except models/*.py&sh
+#except models's path and models/*.py&sh
 !/models
 /models/*
 !/models/*.py
 !/models/*.sh
+#%%%%%%%%%WAY2%%%%%%%%%%%%%%#
+# custom  
+# exclude everything -r
+*
+# include all dir(dir will not be added into git)
+!*/
+#include py&sh at root dir
+!/*.py
+!/*.sh
+!.gitignore
+#exclude  other dirs(dont need because dirs won't be added into git)
+/checkpoints*
+/data/
+/logs/
+/backups/
+/test*
+/venv/
+#except  /nets/*.py&sh -r  search in the whole tree
+!/nets/**/*.py
+!/nets/**/*.sh
+#except reid/*.py&sh -r
+!/pretrained_model/**/*.py
+!/pretrained_model/**/*.sh
+
+!/datasets/**/*.py
+!/datasets/**/*.py
 
 
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
