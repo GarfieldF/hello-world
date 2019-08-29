@@ -8,7 +8,7 @@
 /*
 !*.py
 !*.sh
-#except  toy's path and toy/*.py&sh 
+#except toy's path and then git can find toy/*.py&sh 
 !/toy
 /toy/*
 !/toy/*.py
