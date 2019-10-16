@@ -18,7 +18,7 @@
 /models/*
 !/models/*.py
 !/models/*.sh
-#%%%%%%%%%WAY2%%%%%%%%%%%%%%#
+#%%%%%%%%%WAY2.1%%%%%%%%%%%%%%#
 # custom  
 # exclude everything -r
 *
@@ -28,13 +28,13 @@
 !/*.py
 !/*.sh
 !.gitignore
-#exclude  other dirs(dont need because dirs won't be added into git)
-/checkpoints*
-/data/
-/logs/
-/backups/
-/test*
-/venv/
+#exclude  other dirs(this part is not necessary.although you can see them in git,dirs won't be added into git)
+# /checkpoints*
+# /data/
+# /logs/
+# /backups/
+# /test*
+# /venv/
 #except  /nets/*.py&sh -r  search in the whole tree
 !/nets/**/*.py
 !/nets/**/*.sh
@@ -47,8 +47,40 @@
 
 
 
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
+#%%%%%%%%%WAY2.2%%%%%%%%%%%%%%#
+# custom  
+# exclude everything -r
+*
+# include all dir(dir will not be added into git)
+!*/
 
+#exclude  other dirs
+/checkpoints*
+/data/
+/logs/
+/backups/
+/test*
+/venv/
+
+#include py and sh files in other folders
+!*.py
+!*.sh
+!.gitignore
+
+
+#except  /nets/*.py&sh -r  search in the whole tree
+# !/nets/**/*.py
+# !/nets/**/*.sh
+# #except reid/*.py&sh -r
+# !/pretrained_model/**/*.py
+# !/pretrained_model/**/*.sh
+
+# !/datasets/**/*.py
+# !/datasets/**/*.py
+
+
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%#
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
