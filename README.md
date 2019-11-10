@@ -16,35 +16,23 @@
 
 
 ### 第一次上传 Github 的流程如下：
-0. 在程序所在目录初始化git仓库：git init（文件状态：untracked）
 
-1. 将文件加入追踪并放到暂存（stage）区域（同时隐含记录了被追踪文件的路径树）：git add（状态自动变化：untracked ==> staged）
 
-   文件树如下：
+0.  **在程序所在目录初始化git仓库** ： **git init**（此时文件状态：untracked）
 
-   ├── backup
-   │   ├── csmlv0.py
-   │   ├── mainv0.py
-   │   └── naive5_train.py
-   ├── learner.py
-   ├── .git
-   ├── memeta.py
-   ├── omniglot
-   │   ├── omniglot.npy
-   │   ├── processed
-   │   └── raw
-   ├── omniglotNShot.py
-   └── test.py
+1. **将文件加入追踪并放到暂存（stage）区域** ：**git add**（状态自动变化：untracked ==> staged）
+
+ 
    
-2. 提交更新：将暂存区域的文件存储到本地Git仓库的当前分支（最开始只有一个分支，即主分支:master），所有文件被记录：git commit 
+2. **提交更新** ：将暂存区域的文件存储到本地Git仓库的当前分支（最开始只有一个分支，即主分支:master），所有暂存的文件被保存：**git commit** 
 
-   （状态自动变化：staged ==> unmodified,因为此时工作目录下当前文件和最近一次commit记录的文件内容没有差别，所以认为没有修改）
+   （文件状态自动变化：staged ==> unmodified,因为此时工作目录下当前文件和最近一次commit记录的文件内容没有差别，文件状态自动变为未修改）
 
    第一次commit可视化如图：图中圆点代表了仓库记录了一次提交的内容
 
    ![img1](/home/yzf/commitlog0.png "图中圆点代表了记录一次提交的内容")
 
-3. 和其他远程服务器分享你的本地仓库：远程服务器包括：GitHub/其他主机（github可以认为是世界上最大的装有git软件的主机，或者在另一台服务器上安装git并初始化一个仓库，并和你的主机连接到同一个局域网）：git push
+3. **和其他远程服务器分享你的本地仓库**：远程服务器包括：GitHub/其他主机（github可以认为是世界上最大的装有git软件的主机，或者在另一台服务器上安装git并初始化一个仓库，并和你的主机连接到同一个局域网）： **git push**
 
 ### 更新版本后上传Github流程如下：
 
@@ -69,8 +57,29 @@
 #### 创建仓库
 
     git init #创建本地git仓库
+    
 
 #### 将文件加入追踪方法1：正向添加
+
+    git add . #1.1简单粗暴的把所有文件添加追踪，递归地（不利于长久发展）
+    
+    
+文件树如下：    
+   ├── backup  
+   │   ├── csmlv0.py  
+   │   ├── mainv0.py  
+   │   └── naive5_train.py  
+   ├── learner.py  
+   ├── .git  
+   ├── memeta.py  
+   ├── omniglot  
+   │   ├── omniglot.npy  
+   │   ├── processed  
+   │   └── raw  
+   ├── omniglotNShot.py  
+   └── test.py 
+   
+1.2 温和的通过通配符条件添加
 
     git add toy/*.py #添加toy文件夹下面所有的py类型文件,以后git会追踪你的modify
     git add ./*.py
@@ -81,7 +90,7 @@
 
 #### 将文件加入追踪方法2：反向添加（推荐）
 
-创建.gitignore文件（可下载并参考本教程下的python.gitignore文件，其中给出了三种方式，任选一种自定义修改你需要忽略的文件，之后将python.gitignore文件重命名为.gitignore，放在git init 命令相同的目录下） ：Specifies intentionally untracked files to ignore
+创建.gitignore文件（可下载并参考本教程下的python.gitignore文件，其中给出了三种方式，任选一种自定义修改你需要忽略的文件，之后将python.gitignore文件重命名为.gitignore，放在git init 命令相同的目录下） 
 
         git add . #添加除了被忽略的之外的所有文件
 
@@ -138,7 +147,9 @@
 
 ## 其他
 
-###　Connecting to GitHub with SSH
+
+### Connecting to GitHub with SSH 
+
 作用：一劳永逸的配置，不再需要每次上传本地仓库都登陆github。
 
  [可以直接按照官网教程配置](https://help.github.com/en/articles/connecting-to-github-with-ssh "With a Title"). 
