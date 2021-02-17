@@ -182,3 +182,6 @@ GitHub网站  -- 点击右上角你的头像 settings  --  SSH and GPG keys --Ne
     git submodule add  https://github.com/vlfeat/matconvnet
 
 将别人的项目作为你的工具库调用，既想保留这个库git的功能（git submodule update命令让这个库与github同步更新），又不想让它干扰你的程序的git仓库。例子详见https://github.com/GarfieldF/RGBT-tracking
+
+### 局域网内同步
+git clone  ssh://电脑账户名@仓库ip地址(电脑ip地址)/home/wyy/Desktop/pb(仓库路径)
